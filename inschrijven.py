@@ -5,7 +5,7 @@ import tkinter.messagebox
 
 #loads the excel sheet
 wb2 = load_workbook('test.xlsx')
-print (wb2.sheetnames)
+#print (wb2.sheetnames)
 ws = wb2.active
 
 #loads the page
@@ -67,7 +67,8 @@ def getInfo(event):
 	output += "\n" + vak
 	
 	#puts output in excel
-	ws.append([dag, datum, uur, vNaam1, tNaam1, aNaam1, klas1, vNaam2, tNaam2, aNaam2, klas2, proefnr, titel, vak])
+	ws.append([dag, datum, uur, vNaam1, tNaam1, aNaam1, klas1, proefnr, titel, vak])
+	ws.append([dag, datum, uur, vNaam2, tNaam2, aNaam2, klas2, proefnr, titel, vak])
 	wb2.save("test.xlsx")
 	
 	
